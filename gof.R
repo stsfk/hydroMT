@@ -69,7 +69,7 @@ eval_grid <- expand.grid(
   as_tibble() %>%
   mutate(
     file_name = paste0(
-      "./data/Reg",
+      "./modeling_results/Reg",
       region,
       "_",
       season,
@@ -78,7 +78,7 @@ eval_grid <- expand.grid(
       ".Rda"
     ),
     xgb_file_name = paste0(
-      "./data/xgb_region",
+      "./modeling_results/xgb_region",
       region,
       "_",
       season,

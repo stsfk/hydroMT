@@ -161,7 +161,7 @@ final_xgb_model <- function(optObj, region, season, outer_i) {
   xgboost::xgb.save(
     xgbFit,
     fname = paste0(
-      "./data/xgb_region",
+      "./modeling_results/xgb_region",
       region,
       "_",
       season,
@@ -173,7 +173,7 @@ final_xgb_model <- function(optObj, region, season, outer_i) {
   xgboost::xgb.DMatrix.save(
     dtrain,
     fname = paste0(
-      "./data/xgb_region",
+      "./modeling_results/xgb_region",
       region,
       "_",
       season,
@@ -185,7 +185,7 @@ final_xgb_model <- function(optObj, region, season, outer_i) {
   xgboost::xgb.DMatrix.save(
     dtest,
     fname = paste0(
-      "./data/xgb_region",
+      "./modeling_results/xgb_region",
       region,
       "_",
       season,
@@ -300,7 +300,7 @@ for (i in 1:nrow(input_df)) {
     save(
       cv_folds,
       file = paste0(
-        "./data/xgb_region",
+        "./modeling_results/xgb_region",
         region,
         "_",
         season,

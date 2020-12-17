@@ -533,7 +533,7 @@ run_models_files <- function(region, summer_winter) {
       dtest,
       cv_folds,
       file = paste0(
-        "./data/Reg",
+        "./modeling_results/Reg",
         region,
         "_",
         summer_winter,

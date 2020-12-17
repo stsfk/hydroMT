@@ -69,7 +69,7 @@ eval_grid <- expand.grid(
   as_tibble() %>%
   mutate(
     file_name = paste0(
-      "./data/German Flood/single_region/Reg",
+      "./modeling_results/Reg",
       region,
       "_",
       season,
@@ -78,7 +78,7 @@ eval_grid <- expand.grid(
       ".Rda"
     ),
     xgb_file_name = paste0(
-      "./data/German Flood/single_region/xgb_region",
+      "./modeling_results/xgb_region",
       region,
       "_",
       season,
@@ -278,7 +278,7 @@ for (i in 1:nrow(eval_grid)) {
   eval_grid$mt_trs[[i]] <- mt_trs
 }
 
-save(eval_grid, file = "./data/German Flood/rain_mt.Rda")
+save(eval_grid, file = "./mt_results/rain_mt.Rda")
 
 # PET MT ------------------------------------------------------------------
 
@@ -375,4 +375,4 @@ for (i in 1:nrow(eval_grid)) {
   eval_grid$mt_trs[[i]] <- mt_trs
 }
 
-save(eval_grid, file = "./data/German Flood/pet_mt.Rda")
+save(eval_grid, file = "./mt_results/pet_mt.Rda")
