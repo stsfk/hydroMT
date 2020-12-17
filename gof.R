@@ -171,7 +171,7 @@ ggplot(data_plot, aes(model, r2, color = season)) +
   )
 
 ggsave(
-  filename = "./data/figures/GoF.png",
+  filename = "./mt_results/GoF.png",
   width = 7,
   height = 5.5,
   units = "in",
